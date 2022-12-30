@@ -1,7 +1,10 @@
+/*setting basic flex box*/
+/*the 'vh' and 'vw' commands allow us to make the design elements relitive to the users screen size instead of a static pixel count*/
 *, *::after, *::before {
     box-sizing: border-box;
 }
 
+/*setting how the colors of each element iteracts with each other*/
 :root {
     --hue: 200;
     --saturation: 50%;
@@ -9,11 +12,13 @@
     --background-color: hsl(var(--hue), var(--saturation), 20%);
 
 }
+/*setting colors for the score element and background*/
 body {
     margin: 0;
     background-color: var(--background-color);
     overflow: hidden;
 }
+/*setting colors and positions of both paddles*/
 .paddle {
 --position: 50;
 
@@ -25,14 +30,18 @@ width: 1vh;
 height: 10vh;
 }
 
+/*setting position of left paddle relitive to players screen*/
 .paddle.left {
 left: lvw; 
 }
+
+/*setting position of right paddle relitive to players screen*/
 
 .paddle.right {
     right: 1vw
 }
 
+/*setting position, shape, and color of the 'Ball' element*/
 .ball {
     --x: 50;
     --y: 50;
@@ -47,6 +56,7 @@ width: 2.5vh;
 height: 2.5vh;
 }
 
+/*the following all dictates the way that that the 'score' elements are desplayed to the user*/
 .score {
     display: flex;
     justify-content: center;
